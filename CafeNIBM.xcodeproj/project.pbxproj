@@ -11,7 +11,6 @@
 		4DAE4A0E385484D36D546741 /* Pods_CafeNIBM_CafeNIBMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EA021BD1EC7C7C3E6E75D8 /* Pods_CafeNIBM_CafeNIBMUITests.framework */; };
 		98EEA62B262571CC001048A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EEA62A262571CC001048A7 /* AppDelegate.swift */; };
 		98EEA62D262571CC001048A7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EEA62C262571CC001048A7 /* SceneDelegate.swift */; };
-		98EEA62F262571CC001048A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EEA62E262571CC001048A7 /* ViewController.swift */; };
 		98EEA632262571CC001048A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98EEA630262571CC001048A7 /* Main.storyboard */; };
 		98EEA634262571CD001048A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98EEA633262571CD001048A7 /* Assets.xcassets */; };
 		98EEA637262571CD001048A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98EEA635262571CD001048A7 /* LaunchScreen.storyboard */; };
@@ -22,6 +21,8 @@
 		F043999D26257782007A9583 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F043999826257781007A9583 /* Segoe UI Bold.ttf */; };
 		F043999E26257782007A9583 /* Segoe UI.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F043999926257782007A9583 /* Segoe UI.ttf */; };
 		F043999F26257782007A9583 /* Segoe UI Bold Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F043999A26257782007A9583 /* Segoe UI Bold Italic.ttf */; };
+		F043D5152626A96C002F4799 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043D5142626A96C002F4799 /* SignInViewController.swift */; };
+		F043D5172626AF25002F4799 /* EntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F043D5162626AF25002F4799 /* EntityModel.swift */; };
 		F07BC8912625BBDF00A3B722 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F07BC8902625BBDF00A3B722 /* GoogleService-Info.plist */; };
 		F2956C1DDB2D9AE5BFB6D660 /* Pods_CafeNIBM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E5DCB996ADF1D4107305A9 /* Pods_CafeNIBM.framework */; };
 /* End PBXBuildFile section */
@@ -53,7 +54,6 @@
 		98EEA627262571CC001048A7 /* CafeNIBM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CafeNIBM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98EEA62A262571CC001048A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98EEA62C262571CC001048A7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		98EEA62E262571CC001048A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		98EEA631262571CC001048A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		98EEA633262571CD001048A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98EEA636262571CD001048A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 		F043999826257781007A9583 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
 		F043999926257782007A9583 /* Segoe UI.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI.ttf"; sourceTree = "<group>"; };
 		F043999A26257782007A9583 /* Segoe UI Bold Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold Italic.ttf"; sourceTree = "<group>"; };
+		F043D5142626A96C002F4799 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		F043D5162626AF25002F4799 /* EntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityModel.swift; sourceTree = "<group>"; };
 		F07BC8902625BBDF00A3B722 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FA33C391A7851891C8D484C9 /* Pods-CafeNIBM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBM.release.xcconfig"; path = "Target Support Files/Pods-CafeNIBM/Pods-CafeNIBM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,11 +143,12 @@
 		98EEA629262571CC001048A7 /* CafeNIBM */ = {
 			isa = PBXGroup;
 			children = (
+				F043D513262692C1002F4799 /* Controller */,
+				F043D512262692B5002F4799 /* Model */,
+				F043D5112626929F002F4799 /* Views */,
 				F043999426257402007A9583 /* Fonts */,
 				98EEA62A262571CC001048A7 /* AppDelegate.swift */,
 				98EEA62C262571CC001048A7 /* SceneDelegate.swift */,
-				98EEA62E262571CC001048A7 /* ViewController.swift */,
-				98EEA630262571CC001048A7 /* Main.storyboard */,
 				98EEA633262571CD001048A7 /* Assets.xcassets */,
 				98EEA635262571CD001048A7 /* LaunchScreen.storyboard */,
 				98EEA638262571CD001048A7 /* Info.plist */,
@@ -182,6 +185,30 @@
 				F043999926257782007A9583 /* Segoe UI.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		F043D5112626929F002F4799 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98EEA630262571CC001048A7 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F043D512262692B5002F4799 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F043D5162626AF25002F4799 /* EntityModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F043D513262692C1002F4799 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F043D5142626A96C002F4799 /* SignInViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F7DBF87280CD538B48595D97 /* Frameworks */ = {
@@ -438,8 +465,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98EEA62F262571CC001048A7 /* ViewController.swift in Sources */,
+				F043D5152626A96C002F4799 /* SignInViewController.swift in Sources */,
 				98EEA62B262571CC001048A7 /* AppDelegate.swift in Sources */,
+				F043D5172626AF25002F4799 /* EntityModel.swift in Sources */,
 				98EEA62D262571CC001048A7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
