@@ -62,9 +62,9 @@ class SignInViewController: UIViewController {
                 return
             }
             
-            if let result = authResult {
-                print("User Email : \(result.user.email ?? "No found")")
-            }
+            //save user logged in state
+            let sessionManager = SessionManager()
+            sessionManager.saveUserLogin()
         }
     }
 }

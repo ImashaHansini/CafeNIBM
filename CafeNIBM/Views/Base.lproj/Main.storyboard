@@ -44,6 +44,9 @@
                                 <state key="normal" title="Forgot Password">
                                     <color key="titleColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="7g3-U1-obg" kind="presentation" modalPresentationStyle="fullScreen" id="8Rt-fY-B1U"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lP1-t7-jCi">
                                 <rect key="frame" x="30" y="205" width="260" height="51.5"/>
@@ -58,7 +61,7 @@
                                         <rect key="frame" x="0.0" y="17.5" width="260" height="34"/>
                                         <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -139,10 +142,52 @@
             </objects>
             <point key="canvasLocation" x="133" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Food View Controller-->
+        <scene sceneID="1dC-mh-ydE">
+            <objects>
+                <viewController id="TTo-9U-VwF" customClass="FoodViewController" customModule="CafeNIBM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VWM-K2-71Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrD-ha-ixV">
+                                <rect key="frame" x="20" y="20" width="64" height="22"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="16"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QjX-kc-p9m">
+                                <rect key="frame" x="20" y="62" width="280" height="486"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="TTo-9U-VwF" id="6lR-VM-Y8R"/>
+                                    <outlet property="delegate" destination="TTo-9U-VwF" id="GIl-8F-6p6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2A2-wN-BkV" firstAttribute="trailing" secondItem="QjX-kc-p9m" secondAttribute="trailing" constant="20" id="3oN-kN-QQo"/>
+                            <constraint firstItem="QjX-kc-p9m" firstAttribute="top" secondItem="jrD-ha-ixV" secondAttribute="bottom" constant="20" id="6s2-yt-cwG"/>
+                            <constraint firstItem="jrD-ha-ixV" firstAttribute="leading" secondItem="2A2-wN-BkV" secondAttribute="leading" constant="20" id="Dwl-8w-gs7"/>
+                            <constraint firstItem="jrD-ha-ixV" firstAttribute="top" secondItem="2A2-wN-BkV" secondAttribute="top" constant="20" id="QIW-cr-4Hf"/>
+                            <constraint firstItem="2A2-wN-BkV" firstAttribute="bottom" secondItem="QjX-kc-p9m" secondAttribute="bottom" constant="20" id="qZo-be-Qvi"/>
+                            <constraint firstItem="QjX-kc-p9m" firstAttribute="leading" secondItem="2A2-wN-BkV" secondAttribute="leading" constant="20" id="z92-es-ZSm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2A2-wN-BkV"/>
+                    </view>
+                    <connections>
+                        <outlet property="tblFood" destination="QjX-kc-p9m" id="6tH-V2-Qgx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i5B-Ow-MUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120" y="853.52112676056333"/>
+        </scene>
+        <!--Sign Up View Controller-->
         <scene sceneID="xtg-Fs-UXE">
             <objects>
-                <viewController id="7g3-U1-obg" sceneMemberID="viewController">
+                <viewController id="7g3-U1-obg" customClass="SignUpViewController" customModule="CafeNIBM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sjs-5Z-YKi">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,6 +290,7 @@
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="onSignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9cC-TX-rM3"/>
+                                                    <action selector="onSignUpPressed:" destination="7g3-U1-obg" eventType="touchUpInside" id="dOJ-Lx-QDt"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -257,7 +303,7 @@
                                             <constraint firstAttribute="trailing" secondItem="2BL-s7-NoL" secondAttribute="trailing" constant="30" id="BAC-DZ-keY"/>
                                             <constraint firstAttribute="trailing" secondItem="8su-lb-Nfu" secondAttribute="trailing" constant="30" id="J14-eP-daL"/>
                                             <constraint firstAttribute="height" constant="650" id="NkU-1e-yQt"/>
-                                            <constraint firstItem="a9F-bM-icP" firstAttribute="leading" secondItem="wJ3-zI-vQq" secondAttribute="leading" constant="60" id="QXO-nk-ATq"/>
+                                            <constraint firstItem="a9F-bM-icP" firstAttribute="leading" relation="lessThanOrEqual" secondItem="wJ3-zI-vQq" secondAttribute="leading" constant="60" id="QXO-nk-ATq"/>
                                             <constraint firstItem="2BL-s7-NoL" firstAttribute="top" secondItem="caf-Lr-yFl" secondAttribute="bottom" constant="15" id="Y9O-Pb-ORV"/>
                                             <constraint firstItem="2BL-s7-NoL" firstAttribute="leading" secondItem="wJ3-zI-vQq" secondAttribute="leading" constant="30" id="cbl-Sf-8uN"/>
                                             <constraint firstItem="5Ti-mw-gE1" firstAttribute="leading" secondItem="wJ3-zI-vQq" secondAttribute="leading" constant="30" id="eqj-c7-MIe"/>
@@ -266,7 +312,7 @@
                                             <constraint firstItem="caf-Lr-yFl" firstAttribute="leading" secondItem="wJ3-zI-vQq" secondAttribute="leading" constant="30" id="nyU-cH-xL4"/>
                                             <constraint firstItem="caf-Lr-yFl" firstAttribute="top" secondItem="8su-lb-Nfu" secondAttribute="bottom" constant="15" id="p4u-hJ-d6r"/>
                                             <constraint firstItem="DRR-kJ-heY" firstAttribute="centerX" secondItem="wJ3-zI-vQq" secondAttribute="centerX" id="vs4-44-QVP"/>
-                                            <constraint firstAttribute="trailing" secondItem="a9F-bM-icP" secondAttribute="trailing" constant="60" id="w2s-sv-7J6"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="a9F-bM-icP" secondAttribute="trailing" constant="60" id="w2s-sv-7J6"/>
                                             <constraint firstAttribute="trailing" secondItem="caf-Lr-yFl" secondAttribute="trailing" constant="30" id="yjN-EH-HNd"/>
                                         </constraints>
                                     </view>
@@ -285,6 +331,9 @@
                                                 <state key="normal" title="Sign In">
                                                     <color key="titleColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onSignInPressed:" destination="7g3-U1-obg" eventType="touchUpInside" id="9Cx-KW-Mk2"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -309,6 +358,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jwh-cW-BgR"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="WIg-wd-Ysz" id="Qi5-kW-oYq"/>
+                        <outlet property="txtName" destination="nj4-86-yqU" id="xVc-qb-v4A"/>
+                        <outlet property="txtPassword" destination="enG-HV-fP3" id="vtj-9U-xE4"/>
+                        <outlet property="txtPhone" destination="P79-fs-NfM" id="TDM-3k-gDq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEt-Pq-U6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
