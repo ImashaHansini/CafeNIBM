@@ -14,12 +14,15 @@ struct User{
     var userPhone: String
     
 }
-
+ 
 struct FoodItem{
+    var _id: String
     var foodName: String
     var foodDescription: String
     var foodPrice: Double
     var discount: Int
+    var image: String
+    var category: String
 }
 
 //class User1{

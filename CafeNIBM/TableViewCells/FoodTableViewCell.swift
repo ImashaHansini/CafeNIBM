@@ -9,6 +9,14 @@ import UIKit
 
 class FoodTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var viewContainerDiscount: UIView!
+    @IBOutlet weak var lblDiscount: UILabel!
+    
+    @IBOutlet weak var lblFoodPrice: UILabel!
+    @IBOutlet weak var lblFoodDescription: UILabel!
+    @IBOutlet weak var lblFoodName: UILabel!
+    @IBOutlet weak var imgFood: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -16,8 +24,23 @@ class FoodTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
 
-        // Configure the view for the selected state
+        func setupView(foodItem: FoodItem) {
+            lblFoodName.text = foodItem.foodName
+            lblFoodDescription.text = foodItem.foodDescription
+            lblFoodPrice.text = "LKR \(foodItem.foodPrice)"
+            imgFood.image = UIImage(named: foodItem.image)
+            
+            if foodItem.discount > 0 {
+                viewContainerDiscount.isHidden = false
+                lblDiscount.text = "\(foodItem.discount)%"
+            } else {
+                viewContainerDiscount.isHidden = true
+                lblDiscount.text = ""
+            }
+        }
+        
     }
     
-}
+
