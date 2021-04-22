@@ -16,6 +16,7 @@
 		98EEA637262571CD001048A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98EEA635262571CD001048A7 /* LaunchScreen.storyboard */; };
 		98EEA642262571CD001048A7 /* CafeNIBMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EEA641262571CD001048A7 /* CafeNIBMTests.swift */; };
 		98EEA64D262571CD001048A7 /* CafeNIBMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98EEA64C262571CD001048A7 /* CafeNIBMUITests.swift */; };
+		F04156492631759F00F4AFB1 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04156482631759F00F4AFB1 /* InputValidator.swift */; };
 		F043999B26257782007A9583 /* Segoe UI Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F043999626257781007A9583 /* Segoe UI Italic.ttf */; };
 		F043999C26257782007A9583 /* Segoe Script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F043999726257781007A9583 /* Segoe Script.ttf */; };
 		F043999D26257782007A9583 /* Segoe UI Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F043999826257781007A9583 /* Segoe UI Bold.ttf */; };
@@ -71,6 +72,7 @@
 		98EEA64E262571CD001048A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2EED4CF491464C5407A4AB8 /* Pods-CafeNIBMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBMTests.debug.xcconfig"; path = "Target Support Files/Pods-CafeNIBMTests/Pods-CafeNIBMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E7E5DCB996ADF1D4107305A9 /* Pods_CafeNIBM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CafeNIBM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F04156482631759F00F4AFB1 /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
 		F043999626257781007A9583 /* Segoe UI Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Italic.ttf"; sourceTree = "<group>"; };
 		F043999726257781007A9583 /* Segoe Script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe Script.ttf"; sourceTree = "<group>"; };
 		F043999826257781007A9583 /* Segoe UI Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Segoe UI Bold.ttf"; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				F0927D50262D76CD0050E927 /* SessionManager.swift */,
+				F04156482631759F00F4AFB1 /* InputValidator.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				F0927D53262D9C100050E927 /* FoodViewController.swift in Sources */,
 				98EEA62B262571CC001048A7 /* AppDelegate.swift in Sources */,
 				F0927D51262D76CD0050E927 /* SessionManager.swift in Sources */,
+				F04156492631759F00F4AFB1 /* InputValidator.swift in Sources */,
 				F043D5172626AF25002F4799 /* EntityModel.swift in Sources */,
 				F0927D57262DAF520050E927 /* FoodTableViewCell.swift in Sources */,
 				98EEA62D262571CC001048A7 /* SceneDelegate.swift in Sources */,

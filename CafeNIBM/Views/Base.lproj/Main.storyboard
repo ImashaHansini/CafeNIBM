@@ -139,14 +139,14 @@
                     <connections>
                         <outlet property="txtEmail" destination="d3u-jA-NCD" id="hFY-K0-SeT"/>
                         <outlet property="txtPassword" destination="kNm-mj-0el" id="3TA-RF-GE6"/>
-                        <segue destination="TTo-9U-VwF" kind="presentation" identifier="SignInToHome" modalPresentationStyle="fullScreen" id="MUi-Ql-J2t"/>
+                        <segue destination="ydj-Wl-eDx" kind="presentation" identifier="SignInToHome" modalPresentationStyle="fullScreen" id="xGx-c2-01b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="139"/>
+            <point key="canvasLocation" x="900" y="-486"/>
         </scene>
-        <!--Food View Controller-->
+        <!--Food-->
         <scene sceneID="1dC-mh-ydE">
             <objects>
                 <viewController id="TTo-9U-VwF" customClass="FoodViewController" customModule="CafeNIBM" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,7 +161,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QjX-kc-p9m">
-                                <rect key="frame" x="20" y="62" width="280" height="486"/>
+                                <rect key="frame" x="20" y="62" width="280" height="437"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="TTo-9U-VwF" id="6lR-VM-Y8R"/>
@@ -180,13 +180,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2A2-wN-BkV"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Food" image="Food tab" id="IBa-rh-wX4"/>
                     <connections>
                         <outlet property="tblFood" destination="QjX-kc-p9m" id="6tH-V2-Qgx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5B-Ow-MUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="923"/>
+            <point key="canvasLocation" x="8" y="1128"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="xtg-Fs-UXE">
@@ -371,10 +372,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEt-Pq-U6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922.5" y="139.43661971830986"/>
+            <point key="canvasLocation" x="1883" y="-485"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kC2-5h-iOa">
+            <objects>
+                <tabBarController id="ydj-Wl-eDx" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7SP-9h-WVf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TTo-9U-VwF" kind="relationship" relationship="viewControllers" id="TWX-yD-8L7"/>
+                        <segue destination="8rW-aN-GPe" kind="relationship" relationship="viewControllers" id="lHk-wx-H1E"/>
+                        <segue destination="AqQ-5d-clf" kind="relationship" relationship="viewControllers" id="aST-q2-cfa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Kf-pb-eLo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="335"/>
+        </scene>
+        <!--Order-->
+        <scene sceneID="TKB-OP-wLO">
+            <objects>
+                <viewController id="8rW-aN-GPe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tfO-Qq-J2V">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tJ9-Nj-RWq"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Order" image="Order tab" id="sUS-fc-vvc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5K-cx-FXU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="1127"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="sF4-ms-zeK">
+            <objects>
+                <viewController id="AqQ-5d-clf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aR9-Rs-UXU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yeZ-im-fR9"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Account" image="Account tab" id="SuO-cn-juM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="df6-be-A8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="1127"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Account tab" width="31" height="30"/>
+        <image name="Food tab" width="30" height="30"/>
         <image name="NIBM cafe" width="70" height="69.5"/>
+        <image name="Order tab" width="30" height="30"/>
     </resources>
 </document>
