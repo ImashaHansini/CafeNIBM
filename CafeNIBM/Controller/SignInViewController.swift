@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import NotificationBannerSwift
 
 class SignInViewController: UIViewController {
 
@@ -32,21 +33,29 @@ class SignInViewController: UIViewController {
     func validateInput() -> Bool {
         guard let email = txtEmail.text else {
             print("Email is NULL")
+            let banner = NotificationBanner(title: "Error Signing In", subtitle: "Please enter all the details", style: .danger)
+            banner.show()
             return false
         }
         
         guard let password = txtPassword.text else {
-                 print("Password is NULL")
-                 return false
+            print("Password is NULL")
+            let banner = NotificationBanner(title: "Error Signing In", subtitle: "Please enter all the details", style: .danger)
+            banner.show()
+            return false
         }
         
         if email.count < 5 {
             print("Enter a valid Email")
+            let banner = NotificationBanner(title: "Error Signing In", subtitle: "Please enter valid details", style: .danger)
+            banner.show()
             return false
         }
         
         if password.count < 5 {
             print("Enter a valid Password")
+            let banner = NotificationBanner(title: "Error Signing In", subtitle: "Please enter valid details", style: .danger)
+            banner.show()
             return false
         }
         
@@ -59,12 +68,16 @@ class SignInViewController: UIViewController {
             
             if let err = error {
                 print(err.localizedDescription)
+                //let rightView = UIImageView(image: #imageLiteral(resourceName: "Error"))
+                let banner = NotificationBanner(title: "Error Signing In", subtitle: "Invalid Username or Password", style: .danger)
+                banner.show()
                 return
             }
             
             //save user logged in state
             let sessionManager = SessionManager()
             sessionManager.saveUserLogin()
+            self.performSegue(withIdentifier: "SignInToHome", sender: nil)
         }
     }
 }

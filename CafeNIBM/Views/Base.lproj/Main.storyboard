@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TTo-9U-VwF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -38,6 +38,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="7g3-U1-obg" kind="presentation" identifier="SignUpViewController" modalPresentationStyle="fullScreen" id="V9b-QO-QTs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -47,9 +50,6 @@
                                 <state key="normal" title="Forgot Password">
                                     <color key="titleColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="7g3-U1-obg" kind="presentation" modalPresentationStyle="fullScreen" id="8Rt-fY-B1U"/>
-                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lP1-t7-jCi">
                                 <rect key="frame" x="30" y="205" width="260" height="51.5"/>
@@ -139,6 +139,7 @@
                     <connections>
                         <outlet property="txtEmail" destination="d3u-jA-NCD" id="hFY-K0-SeT"/>
                         <outlet property="txtPassword" destination="kNm-mj-0el" id="3TA-RF-GE6"/>
+                        <segue destination="TTo-9U-VwF" kind="presentation" identifier="SignInToHome" modalPresentationStyle="fullScreen" id="MUi-Ql-J2t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -185,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5B-Ow-MUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="853.52112676056333"/>
+            <point key="canvasLocation" x="131" y="923"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="xtg-Fs-UXE">
