@@ -35,6 +35,9 @@ class FoodItemViewController: UIViewController {
     
 
     @IBAction func btnAddToCart(_ sender: UIButton) {
-    }
+        if let item = self.foodItem {
+            CartHandler.foodItems.append(item)
+        }
     
+    }
 }

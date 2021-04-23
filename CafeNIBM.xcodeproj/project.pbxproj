@@ -33,6 +33,11 @@
 		F0927D57262DAF520050E927 /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0927D55262DAF520050E927 /* FoodTableViewCell.swift */; };
 		F0927D58262DAF520050E927 /* FoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0927D56262DAF520050E927 /* FoodTableViewCell.xib */; };
 		F09A8BF02632EC1A00D00FA0 /* FoodItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09A8BEF2632EC1A00D00FA0 /* FoodItemViewController.swift */; };
+		F0CA730826330B3F00078D1D /* CartHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA730726330B3F00078D1D /* CartHandler.swift */; };
+		F0CA730A26331A4F00078D1D /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA730926331A4F00078D1D /* CartViewController.swift */; };
+		F0CA730C26333D1400078D1D /* OrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA730B26333D1400078D1D /* OrderViewController.swift */; };
+		F0CA730F26333FA000078D1D /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CA730D26333FA000078D1D /* OrderTableViewCell.swift */; };
+		F0CA731026333FA000078D1D /* OrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0CA730E26333FA000078D1D /* OrderTableViewCell.xib */; };
 		F2956C1DDB2D9AE5BFB6D660 /* Pods_CafeNIBM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E5DCB996ADF1D4107305A9 /* Pods_CafeNIBM.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +97,11 @@
 		F0927D55262DAF520050E927 /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		F0927D56262DAF520050E927 /* FoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodTableViewCell.xib; sourceTree = "<group>"; };
 		F09A8BEF2632EC1A00D00FA0 /* FoodItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemViewController.swift; sourceTree = "<group>"; };
+		F0CA730726330B3F00078D1D /* CartHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartHandler.swift; sourceTree = "<group>"; };
+		F0CA730926331A4F00078D1D /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		F0CA730B26333D1400078D1D /* OrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewController.swift; sourceTree = "<group>"; };
+		F0CA730D26333FA000078D1D /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		F0CA730E26333FA000078D1D /* OrderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderTableViewCell.xib; sourceTree = "<group>"; };
 		FA33C391A7851891C8D484C9 /* Pods-CafeNIBM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CafeNIBM.release.xcconfig"; path = "Target Support Files/Pods-CafeNIBM/Pods-CafeNIBM.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +242,8 @@
 				F03C76DC2632B3FE00745C4D /* ProfileViewController.swift */,
 				F03C76DE2632BA8C00745C4D /* LaunchViewController.swift */,
 				F09A8BEF2632EC1A00D00FA0 /* FoodItemViewController.swift */,
+				F0CA730926331A4F00078D1D /* CartViewController.swift */,
+				F0CA730B26333D1400078D1D /* OrderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -241,6 +253,7 @@
 			children = (
 				F0927D50262D76CD0050E927 /* SessionManager.swift */,
 				F04156482631759F00F4AFB1 /* InputValidator.swift */,
+				F0CA730726330B3F00078D1D /* CartHandler.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -250,6 +263,8 @@
 			children = (
 				F0927D55262DAF520050E927 /* FoodTableViewCell.swift */,
 				F0927D56262DAF520050E927 /* FoodTableViewCell.xib */,
+				F0CA730D26333FA000078D1D /* OrderTableViewCell.swift */,
+				F0CA730E26333FA000078D1D /* OrderTableViewCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -376,6 +391,7 @@
 				F043999D26257782007A9583 /* Segoe UI Bold.ttf in Resources */,
 				F07BC8912625BBDF00A3B722 /* GoogleService-Info.plist in Resources */,
 				F043999E26257782007A9583 /* Segoe UI.ttf in Resources */,
+				F0CA731026333FA000078D1D /* OrderTableViewCell.xib in Resources */,
 				98EEA634262571CD001048A7 /* Assets.xcassets in Resources */,
 				F043999F26257782007A9583 /* Segoe UI Bold Italic.ttf in Resources */,
 				F043999B26257782007A9583 /* Segoe UI Italic.ttf in Resources */,
@@ -511,13 +527,17 @@
 			files = (
 				F043D5152626A96C002F4799 /* SignInViewController.swift in Sources */,
 				F0927D53262D9C100050E927 /* FoodViewController.swift in Sources */,
+				F0CA730F26333FA000078D1D /* OrderTableViewCell.swift in Sources */,
+				F0CA730A26331A4F00078D1D /* CartViewController.swift in Sources */,
 				F03C76DD2632B3FE00745C4D /* ProfileViewController.swift in Sources */,
 				98EEA62B262571CC001048A7 /* AppDelegate.swift in Sources */,
+				F0CA730826330B3F00078D1D /* CartHandler.swift in Sources */,
 				F0927D51262D76CD0050E927 /* SessionManager.swift in Sources */,
 				F04156492631759F00F4AFB1 /* InputValidator.swift in Sources */,
 				F043D5172626AF25002F4799 /* EntityModel.swift in Sources */,
 				F0927D57262DAF520050E927 /* FoodTableViewCell.swift in Sources */,
 				F03C76DF2632BA8C00745C4D /* LaunchViewController.swift in Sources */,
+				F0CA730C26333D1400078D1D /* OrderViewController.swift in Sources */,
 				F09A8BF02632EC1A00D00FA0 /* FoodItemViewController.swift in Sources */,
 				98EEA62D262571CC001048A7 /* SceneDelegate.swift in Sources */,
 				F0585AE7262B36A5004750D9 /* SignUpViewController.swift in Sources */,
