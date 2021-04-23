@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nBE-vt-Ejp">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Segoe Script.ttf">
+            <string>SegoeScript</string>
+        </array>
         <array key="Segoe UI Bold.ttf">
             <string>SegoeUI-Bold</string>
         </array>
@@ -183,11 +186,121 @@
                     <tabBarItem key="tabBarItem" title="Food" image="Food tab" id="IBa-rh-wX4"/>
                     <connections>
                         <outlet property="tblFood" destination="QjX-kc-p9m" id="6tH-V2-Qgx"/>
+                        <segue destination="gPQ-XL-aFY" kind="presentation" identifier="HomeToViewFoodItem" modalPresentationStyle="fullScreen" id="VtA-HH-1Eb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i5B-Ow-MUo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8" y="1128"/>
+        </scene>
+        <!--Food Item View Controller-->
+        <scene sceneID="fuJ-Xb-cu4">
+            <objects>
+                <viewController id="gPQ-XL-aFY" customClass="FoodItemViewController" customModule="CafeNIBM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LbF-2R-nmH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uj-bg-m6p">
+                                <rect key="frame" x="134" y="20" width="52" height="22"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="16"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EJe-v6-Mjt">
+                                <rect key="frame" x="15" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="Dvw-di-Iv6"/>
+                                    <constraint firstAttribute="height" constant="30" id="mAa-zn-tm1"/>
+                                </constraints>
+                                <color key="tintColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button" image="arrow.left" catalog="system"/>
+                                <connections>
+                                    <action selector="btnBackPressed:" destination="gPQ-XL-aFY" eventType="touchUpInside" id="gDN-04-cqR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lPX-gU-agx">
+                                <rect key="frame" x="60" y="100" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="f83-13-9vZ"/>
+                                    <constraint firstAttribute="width" constant="200" id="jnt-Gd-c10"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gW-KS-tkw">
+                                <rect key="frame" x="15" y="330" width="290" height="20"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="15"/>
+                                <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZW-7O-DS9">
+                                <rect key="frame" x="15" y="360" width="290" height="16"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bIt-sx-REy">
+                                <rect key="frame" x="15" y="416" width="290" height="18"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="13"/>
+                                <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oD-2S-TAN">
+                                <rect key="frame" x="20" y="498" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="khA-Tp-xt1"/>
+                                    <constraint firstAttribute="height" constant="40" id="qGh-be-3b2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
+                                <state key="normal" title="Add to Cart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnAddToCart:" destination="gPQ-XL-aFY" eventType="touchUpInside" id="XOV-Sw-A47"/>
+                                    <action selector="onSignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TrG-XO-9Ty"/>
+                                    <action selector="onSignOutPressed:" destination="AqQ-5d-clf" eventType="touchUpInside" id="CuT-hp-xXj"/>
+                                    <action selector="onSignUpPressed:" destination="7g3-U1-obg" eventType="touchUpInside" id="mz9-6o-XRn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sZW-7O-DS9" firstAttribute="top" secondItem="0gW-KS-tkw" secondAttribute="bottom" constant="10" id="1Sf-4l-yra"/>
+                            <constraint firstItem="6Uj-bg-m6p" firstAttribute="centerX" secondItem="LbF-2R-nmH" secondAttribute="centerX" id="1tq-kR-Alp"/>
+                            <constraint firstItem="lPX-gU-agx" firstAttribute="top" secondItem="6Uj-bg-m6p" secondAttribute="bottom" constant="58" id="8Wn-nB-zPl"/>
+                            <constraint firstItem="0gW-KS-tkw" firstAttribute="top" secondItem="lPX-gU-agx" secondAttribute="bottom" constant="30" id="FOs-sI-01N"/>
+                            <constraint firstItem="bIt-sx-REy" firstAttribute="top" secondItem="sZW-7O-DS9" secondAttribute="bottom" constant="40" id="GxX-aR-N2H"/>
+                            <constraint firstItem="Gtp-Av-Nm0" firstAttribute="trailing" secondItem="3oD-2S-TAN" secondAttribute="trailing" constant="20" id="HyD-JN-GOy"/>
+                            <constraint firstItem="sZW-7O-DS9" firstAttribute="leading" secondItem="Gtp-Av-Nm0" secondAttribute="leading" constant="15" id="Ktq-xE-LMc"/>
+                            <constraint firstItem="Gtp-Av-Nm0" firstAttribute="trailing" secondItem="0gW-KS-tkw" secondAttribute="trailing" constant="15" id="OPf-uy-Ts7"/>
+                            <constraint firstItem="EJe-v6-Mjt" firstAttribute="leading" secondItem="Gtp-Av-Nm0" secondAttribute="leading" constant="15" id="WYL-qU-DTK"/>
+                            <constraint firstItem="bIt-sx-REy" firstAttribute="leading" secondItem="Gtp-Av-Nm0" secondAttribute="leading" constant="15" id="YhI-lr-u2x"/>
+                            <constraint firstItem="lPX-gU-agx" firstAttribute="centerX" secondItem="LbF-2R-nmH" secondAttribute="centerX" id="cSG-IS-m0C"/>
+                            <constraint firstItem="EJe-v6-Mjt" firstAttribute="top" secondItem="Gtp-Av-Nm0" secondAttribute="top" constant="20" id="d4H-Oj-xOQ"/>
+                            <constraint firstItem="0gW-KS-tkw" firstAttribute="leading" secondItem="Gtp-Av-Nm0" secondAttribute="leading" constant="15" id="lMC-Vo-ZaB"/>
+                            <constraint firstItem="Gtp-Av-Nm0" firstAttribute="trailing" secondItem="sZW-7O-DS9" secondAttribute="trailing" constant="15" id="mCb-Tk-uDu"/>
+                            <constraint firstItem="Gtp-Av-Nm0" firstAttribute="bottom" secondItem="3oD-2S-TAN" secondAttribute="bottom" constant="30" id="mIB-oE-ErI"/>
+                            <constraint firstItem="6Uj-bg-m6p" firstAttribute="top" secondItem="Gtp-Av-Nm0" secondAttribute="top" constant="20" id="oHG-d6-KL9"/>
+                            <constraint firstItem="Gtp-Av-Nm0" firstAttribute="trailing" secondItem="bIt-sx-REy" secondAttribute="trailing" constant="15" id="ov6-hd-oRj"/>
+                            <constraint firstItem="3oD-2S-TAN" firstAttribute="leading" secondItem="Gtp-Av-Nm0" secondAttribute="leading" constant="20" id="pPz-93-KNU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gtp-Av-Nm0"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgFood" destination="lPX-gU-agx" id="EwV-Sz-P4K"/>
+                        <outlet property="lblFoodDescription" destination="sZW-7O-DS9" id="pap-s8-Zga"/>
+                        <outlet property="lblFoodName" destination="0gW-KS-tkw" id="Kiv-Ac-5Gb"/>
+                        <outlet property="lblFoodPrice" destination="bIt-sx-REy" id="lBL-YX-b3q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QSm-cj-Clc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7.5" y="1868.661971830986"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="xtg-Fs-UXE">
@@ -374,6 +487,56 @@
             </objects>
             <point key="canvasLocation" x="1883" y="-485"/>
         </scene>
+        <!--Launch View Controller-->
+        <scene sceneID="Ar3-bn-59z">
+            <objects>
+                <viewController id="nBE-vt-Ejp" customClass="LaunchViewController" customModule="CafeNIBM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DAp-8n-ZAF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NIBM cafe" translatesAutoresizingMaskIntoConstraints="NO" id="V09-gr-b0m">
+                                <rect key="frame" x="85" y="209" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="9fD-hw-Dep"/>
+                                    <constraint firstAttribute="height" constant="150" id="vcP-Ug-ie0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By NIBM Computing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVa-Sz-vMa">
+                                <rect key="frame" x="81.5" y="522" width="157.5" height="16"/>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="12"/>
+                                <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cafe'NIBM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tfd-x7-hoB">
+                                <rect key="frame" x="94.5" y="367" width="131" height="38.5"/>
+                                <fontDescription key="fontDescription" name="SegoeScript" family="Segoe Script" pointSize="24"/>
+                                <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Tfd-x7-hoB" firstAttribute="top" secondItem="V09-gr-b0m" secondAttribute="bottom" constant="8" id="3Rj-6b-Kvt"/>
+                            <constraint firstItem="9K0-2j-ZyH" firstAttribute="bottom" secondItem="qVa-Sz-vMa" secondAttribute="bottom" constant="30" id="7f9-fS-qRJ"/>
+                            <constraint firstItem="V09-gr-b0m" firstAttribute="centerY" secondItem="DAp-8n-ZAF" secondAttribute="centerY" id="8DW-at-QTc"/>
+                            <constraint firstItem="V09-gr-b0m" firstAttribute="centerX" secondItem="DAp-8n-ZAF" secondAttribute="centerX" id="Hyw-O7-3hT"/>
+                            <constraint firstItem="Tfd-x7-hoB" firstAttribute="top" secondItem="V09-gr-b0m" secondAttribute="bottom" constant="8" id="TxK-dF-RaI"/>
+                            <constraint firstItem="Tfd-x7-hoB" firstAttribute="centerX" secondItem="DAp-8n-ZAF" secondAttribute="centerX" id="VH1-4y-hkb"/>
+                            <constraint firstItem="qVa-Sz-vMa" firstAttribute="centerX" secondItem="DAp-8n-ZAF" secondAttribute="centerX" id="cs6-z0-4SQ"/>
+                            <constraint firstItem="Tfd-x7-hoB" firstAttribute="top" secondItem="V09-gr-b0m" secondAttribute="bottom" constant="8" id="xdE-lW-Son"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9K0-2j-ZyH"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="LaunchToSignIn" modalPresentationStyle="fullScreen" id="fu7-U3-k1W"/>
+                        <segue destination="ydj-Wl-eDx" kind="presentation" identifier="LaunchToHome" modalPresentationStyle="fullScreen" id="Duv-Du-DdN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jU9-Wo-RHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-416" y="-49"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kC2-5h-iOa">
             <objects>
@@ -409,27 +572,107 @@
             </objects>
             <point key="canvasLocation" x="900" y="1127"/>
         </scene>
-        <!--Account-->
+        <!--Profile-->
         <scene sceneID="sF4-ms-zeK">
             <objects>
-                <viewController id="AqQ-5d-clf" sceneMemberID="viewController">
+                <viewController id="AqQ-5d-clf" customClass="ProfileViewController" customModule="CafeNIBM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aR9-Rs-UXU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFE-1W-tyF">
+                                <rect key="frame" x="20" y="449" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6Dz-85-I1u"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="NAM-RI-YZL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SegoeUI" family="Segoe UI" pointSize="15"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onSignInPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F7R-kr-YSH"/>
+                                    <action selector="onSignOutPressed:" destination="AqQ-5d-clf" eventType="touchUpInside" id="dxI-yj-khC"/>
+                                    <action selector="onSignUpPressed:" destination="7g3-U1-obg" eventType="touchUpInside" id="NUp-GI-NpZ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIy-y3-upL">
+                                <rect key="frame" x="20" y="20" width="50" height="21.5"/>
+                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="16"/>
+                                <color key="textColor" red="0.94117647059999998" green="0.64705882349999999" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4Pq-KN-0Je">
+                                <rect key="frame" x="20" y="61.5" width="158" height="72.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Account" translatesAutoresizingMaskIntoConstraints="NO" id="6vq-35-mzg">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="72.5"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-f7-lYC">
+                                        <rect key="frame" x="86.5" y="0.0" width="71.5" height="72.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ew7-5S-HaE">
+                                                <rect key="frame" x="0.0" y="0.0" width="71.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="13"/>
+                                                <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oI8-bo-8C6">
+                                                <rect key="frame" x="0.0" y="27.5" width="71.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="13"/>
+                                                <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FKG-uO-Abz">
+                                                <rect key="frame" x="0.0" y="55" width="71.5" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="SegoeUI-Bold" family="Segoe UI" pointSize="13"/>
+                                                <color key="textColor" red="0.2901960784" green="0.22352941179999999" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yeZ-im-fR9" firstAttribute="trailing" secondItem="ZFE-1W-tyF" secondAttribute="trailing" constant="20" id="Gr6-tN-qRN"/>
+                            <constraint firstItem="jIy-y3-upL" firstAttribute="leading" secondItem="yeZ-im-fR9" secondAttribute="leading" constant="20" id="dNh-Tk-xe8"/>
+                            <constraint firstItem="yeZ-im-fR9" firstAttribute="bottom" secondItem="ZFE-1W-tyF" secondAttribute="bottom" constant="30" id="gVJ-dk-NSn"/>
+                            <constraint firstItem="ZFE-1W-tyF" firstAttribute="leading" secondItem="yeZ-im-fR9" secondAttribute="leading" constant="20" id="oeN-Y0-L0e"/>
+                            <constraint firstItem="4Pq-KN-0Je" firstAttribute="top" secondItem="jIy-y3-upL" secondAttribute="bottom" constant="20" id="sSR-uR-jim"/>
+                            <constraint firstItem="jIy-y3-upL" firstAttribute="top" secondItem="yeZ-im-fR9" secondAttribute="top" constant="20" id="yY6-cp-Pf8"/>
+                            <constraint firstItem="4Pq-KN-0Je" firstAttribute="leading" secondItem="yeZ-im-fR9" secondAttribute="leading" constant="20" id="zTg-8T-SaX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yeZ-im-fR9"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="Account tab" id="SuO-cn-juM"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Account tab" id="SuO-cn-juM"/>
+                    <connections>
+                        <outlet property="txtEmail" destination="oI8-bo-8C6" id="egu-Yw-OtV"/>
+                        <outlet property="txtPhone" destination="FKG-uO-Abz" id="9rI-NJ-mB8"/>
+                        <outlet property="txtUsername" destination="Ew7-5S-HaE" id="JB8-Ri-9Me"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="df6-be-A8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1796" y="1127"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Duv-Du-DdN"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="Account" width="71.5" height="71"/>
         <image name="Account tab" width="31" height="30"/>
         <image name="Food tab" width="30" height="30"/>
         <image name="NIBM cafe" width="70" height="69.5"/>
         <image name="Order tab" width="30" height="30"/>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
     </resources>
 </document>

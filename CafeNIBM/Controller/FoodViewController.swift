@@ -15,6 +15,7 @@ class FoodViewController: UIViewController {
     var ref: DatabaseReference!
     
     var foodItems: [FoodItem] = []
+    var selectedFoodItem : FoodItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,9 +23,15 @@ class FoodViewController: UIViewController {
         ref = Database.database().reference()
         getFoodItemData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeToViewFoodItem" {
+            let destinationVC = segue.destination as! FoodItemViewController
+            destinationVC.foodItem = selectedFoodItem
+        }
+    }
 
 }
-
 extension FoodViewController{
     func getFoodItemData() {
         ref.child("foodItems").observe(.value, with: {
@@ -65,6 +72,10 @@ extension FoodViewController : UITableViewDelegate, UITableViewDataSource {
         return cell
         
     }
-    
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedFoodItem = foodItems[indexPath.row]
+        self.performSegue(withIdentifier: "HomeToViewFoodItem", sender: nil)
+        
+        
+    }
 }

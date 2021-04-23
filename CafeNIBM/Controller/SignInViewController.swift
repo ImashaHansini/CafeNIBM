@@ -57,9 +57,9 @@ class SignInViewController: UIViewController {
             }
             
             //save user logged in state
-            let sessionManager = SessionManager()
-            sessionManager.saveUserLogin()
-            self.performSegue(withIdentifier: "SignInToHome", sender: nil)
+//            let sessionManager = SessionManager()
+//            sessionManager.saveUserLogin()
+//            self.performSegue(withIdentifier: "SignInToHome", sender: nil)
         }
     }
     
@@ -73,7 +73,15 @@ class SignInViewController: UIViewController {
                 if snapshot.hasChildren() {
                     if let data = snapshot.value {
                         if let userData = data as? [String: String] {
-                        
+                            let user = User(
+                                userName: userData["userName"]!,
+                                userEmail: userData["userEmail"]!,
+                                userPassword: userData["userPassword"]!,
+                                userPhone: userData["userPhone"]!)
+                            
+                                let sessionMGR = SessionManager()
+                                sessionMGR.saveUserLogin(user: user)
+                                self.performSegue(withIdentifier: "SignInToHome", sender: nil)
                     }
                 }
             } else {
